@@ -129,7 +129,7 @@ function ContactBody() {
           <ContactBlock label="Headquarters" last>
             Biofuelix Solutions Pvt. Ltd.
             <br />
-            New Delhi, India
+            Ghatlodia, Ahmedabad, Gujarat, India
             <br />
             <span style={{ color: "rgba(245,240,230,0.55)", fontSize: 13 }}>
               Address details on request

@@ -15,14 +15,15 @@ function AboutHero() {
         <div className="hero-eyebrow-row reveal">
           <div className="eyebrow">About · Our story</div>
           <div className="eyebrow no-bar mono" style={{ color: "var(--ink-soft)" }}>
-            Founded 2026 · New Delhi
+            Ahmedabad · India
           </div>
         </div>
         <h1
           className="display-xxl hero-headline reveal"
-          style={{ transitionDelay: "0.15s", maxWidth: "16ch" }}
+          style={{ transitionDelay: "0.15s", maxWidth: "20ch" }}
         >
-          We are <span className="accent-mark italic">bridging</span> the gap to a greener tomorrow.
+          We help industries transition towards smarter, cleaner and more{" "}
+          <span className="accent-mark italic">sustainable energy solutions.</span>
         </h1>
         <div className="hero-meta-row reveal" style={{ transitionDelay: "0.3s" }}>
           <p className="lead">
@@ -208,7 +209,7 @@ function FullFounderNote() {
     <section className="section section-cream">
       <div className="shell">
         <div className="eyebrow reveal" style={{ marginBottom: 24 }}>
-          A message from the founders
+          A message from the founder
         </div>
         <h2
           className="display-xl serif reveal"
@@ -244,7 +245,7 @@ function FullFounderNote() {
                   marginBottom: 8,
                 }}
               >
-                Anjali & Sandeep Nair
+                Anjali Nair
               </div>
               <div
                 className="mono"
@@ -255,7 +256,7 @@ function FullFounderNote() {
                   color: "var(--ink-faint)",
                 }}
               >
-                Co-Founders · Biofuelix Solutions
+                Founder · Biofuelix Solutions
               </div>
             </div>
           </div>
@@ -272,29 +273,29 @@ function FullFounderNote() {
             }}
           >
             <p>
-              When we first looked into the biomass industry, we didn't just see agricultural waste;
-              we saw an untapped solution to one of our generation's greatest challenges: the
+              When I first looked into the biomass industry, I didn't just see agricultural waste; I
+              saw an untapped solution to one of our generation's greatest challenges: the
               transition to sustainable energy.
             </p>
             <p>
-              However, we also saw the friction. Industrial leaders wanted to go green, but they
-              were often held back by inconsistent supply, varying fuel quality, and the sheer
-              complexity of moving material from the farm to the furnace.{" "}
+              However, I also saw the friction. Industrial leaders wanted to go green, but they were
+              often held back by inconsistent supply, varying fuel quality, and the sheer complexity
+              of moving material from the farm to the furnace.{" "}
               <span style={{ color: "var(--ink)", fontWeight: 500 }}>
                 The world didn't just need more fuel — it needed a better bridge.
               </span>
             </p>
             <p>Biofuelix Solutions was born from that realization.</p>
             <p>
-              Our goal was to create a trading house built on the values of transparency,
-              reliability, and precision. We don't just facilitate transactions; we take on the
-              responsibility of the supply chain so that you can focus on your core operations.
-              Whether it is auditing the calorific value of every batch or navigating the
-              complexities of 2026's new carbon regulations, we are in the trenches with you.
+              My goal was to create a trading house built on the values of transparency, reliability,
+              and precision. We don't just facilitate transactions; we take on the responsibility of
+              the supply chain so that you can focus on your core operations. Whether it is auditing
+              the calorific value of every batch or navigating the complexities of 2026's new carbon
+              regulations, we are in the trenches with you.
             </p>
             <p style={{ color: "var(--ink)", fontWeight: 500 }}>
-              For us, every ton of briquettes or pellets delivered is more than just a sale — it is
-              a ton of coal left in the ground, a field of stubble not burned in the open air, and a
+              For us, every ton of briquettes or pellets delivered is more than just a sale — it is a
+              ton of coal left in the ground, a field of stubble not burned in the open air, and a
               step toward a cleaner atmosphere for all of us.
             </p>
             <p>

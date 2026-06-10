@@ -249,22 +249,36 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   letter-spacing: -0.01em;
   color: var(--forest);
 }
-.nav-brand img { width: 36px; height: 36px; border-radius: 999px; }
+.nav-brand img {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: var(--paper);
+  padding: 3px;
+  border: 1.5px solid var(--accent);
+  box-shadow: 0 4px 16px rgba(26, 58, 36, 0.18), 0 0 0 4px rgba(184, 154, 78, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-brand:hover img {
+  transform: scale(1.04);
+  box-shadow: 0 6px 22px rgba(26, 58, 36, 0.24), 0 0 0 5px rgba(184, 154, 78, 0.18);
+}
 .nav-brand small {
   font-family: var(--font-mono);
   font-size: 9px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink-faint);
   display: block;
-  margin-top: 2px;
+  margin-top: 3px;
   font-weight: 400;
 }
 .nav-brand .b-name { line-height: 1; }

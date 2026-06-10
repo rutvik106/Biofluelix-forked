@@ -13,7 +13,7 @@ export function Hero() {
         <div className="hero-eyebrow-row reveal">
           <div className="eyebrow">Biofuelix Solutions · 2026</div>
           <div className="eyebrow no-bar" style={{ color: "var(--ink-soft)" }}>
-            <span className="mono">N 28.61° · E 77.20°</span>
+            <span className="mono">N 23.0761° · E 72.5520°</span>
           </div>
         </div>
 
@@ -23,7 +23,7 @@ export function Hero() {
           <br />
           <span>fields </span>
           <FlameLeaf size="0.85em" color="var(--leaf)" />
-          <span> & furnaces.</span>
+          <span> & fuel.</span>
         </h1>
 
         <div className="hero-meta-row reveal" style={{ transitionDelay: "0.3s" }}>

@@ -25,7 +25,7 @@ export function Nav() {
         <img src="/assets/biofuelix-logo.jpeg" alt="Biofuelix Solutions" />
         <div>
           <div className="b-name">Biofuelix</div>
-          <small>Solutions · Est. 2026</small>
+          <small>Solutions</small>
         </div>
       </Link>
       <ul className="nav-links">

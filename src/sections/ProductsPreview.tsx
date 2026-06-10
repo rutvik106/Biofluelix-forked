@@ -12,8 +12,8 @@ export function ProductsPreview() {
           <div className="left">
             <div className="eyebrow">Two formats · One mission</div>
             <h2 className="serif" style={{ marginTop: 16 }}>
-              Industrial fuel,<br />
-              <span className="italic" style={{ color: "var(--accent)" }}>engineered.</span>
+              Engineering sustainable<br />
+              <span className="italic" style={{ color: "var(--accent)" }}>energy solutions.</span>
             </h2>
           </div>
           <div className="right">
@@ -26,6 +26,20 @@ export function ProductsPreview() {
             </Link>
           </div>
         </div>
+
+        <p
+          className="display-m serif reveal"
+          style={{
+            fontWeight: 300,
+            marginTop: 48,
+            maxWidth: "24ch",
+            lineHeight: 1.25,
+          }}
+        >
+          Waste becomes <span className="italic" style={{ color: "var(--accent)" }}>fuel.</span> Fuel
+          becomes <span className="italic" style={{ color: "var(--accent)" }}>carbon credit.</span>{" "}
+          Carbon credit becomes <span className="italic" style={{ color: "var(--accent)" }}>margin.</span>
+        </p>
 
         <div className="product-grid reveal-stagger">
           <Link to="/products#briquettes" className="product-card">

@@ -17,34 +17,32 @@ const PILLARS: Pillar[] = [
   },
   {
     num: "02",
-    title: "Supply Resilience",
-    body: "A vast network of producers across the agricultural belt means seasonal harvests never dictate your operational uptime. Stocked through the off-season.",
+    title: "Operational Efficiency",
+    body: "Optimizing energy systems to improve performance, scalability, and resource utilization — ensuring that supply chain fluctuations never affect your bottom line.",
     icon: (
       <svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" strokeWidth="1.4">
-        <path d="M12 44V20l20-8 20 8v24" />
-        <path d="M12 44h40" />
-        <path d="M22 44V28h20v16" />
-        <path d="M28 44v-8h8v8" />
+        <circle cx="32" cy="34" r="20" />
+        <path d="M32 34l11-9" />
+        <path d="M32 34v-2" />
+        <path d="M20 14l4 6M44 14l-4 6" />
       </svg>
     ),
   },
   {
     num: "03",
-    title: "Logistical Precision",
-    body: "From factory gate to your boiler house, we manage transport, storage, and timing. The transition from coal to biomass becomes seamless for your team.",
+    title: "Industrial Reliability",
+    body: "Delivering dependable, future-ready energy solutions for evolving industry needs — so your boilers stay supplied through every season and harvest cycle.",
     icon: (
       <svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" strokeWidth="1.4">
-        <rect x="6" y="22" width="32" height="22" rx="1" />
-        <path d="M38 28h12l8 8v8H38z" />
-        <circle cx="18" cy="48" r="4" />
-        <circle cx="48" cy="48" r="4" />
+        <path d="M32 8l20 8v14c0 14-9 22-20 26-11-4-20-12-20-26V16z" />
+        <path d="M24 32l6 6 12-13" />
       </svg>
     ),
   },
   {
     num: "04",
-    title: "Sustainability Expertise",
-    body: "ESG reporting, carbon credit pathways under India's CCTS, biomass blending math — we provide the data alongside the fuel. Compliance becomes advantage.",
+    title: "Environmental Responsibility",
+    body: "Supporting cleaner energy adoption while reducing environmental impact — turning agricultural residue into low-emission fuel and measurable carbon savings.",
     icon: (
       <svg viewBox="0 0 64 64" width="56" height="56" fill="none" stroke="currentColor" strokeWidth="1.4">
         <path d="M32 8C20 8 12 16 12 28c0 16 14 28 20 28 6 0 20-12 20-28 0-12-8-20-20-20z" />
@@ -61,10 +59,10 @@ export function Pillars() {
       <div className="shell">
         <div className="section-header reveal">
           <div className="left">
-            <div className="eyebrow">The Biofuelix Advantage</div>
+            <div className="eyebrow">Why Biofuelix</div>
             <h2 className="serif" style={{ marginTop: 16 }}>
-              Built on four <span className="italic" style={{ color: "var(--accent)" }}>pillars</span>{" "}
-              — not promises.
+              Built for the future of{" "}
+              <span className="italic" style={{ color: "var(--accent)" }}>sustainable industry.</span>
             </h2>
           </div>
           <div className="right">

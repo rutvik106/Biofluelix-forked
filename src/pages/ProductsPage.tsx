@@ -36,12 +36,29 @@ function ProductsHero() {
         </div>
         <h1
           className="display-xxl hero-headline reveal"
-          style={{ transitionDelay: "0.15s", maxWidth: "14ch" }}
+          style={{ transitionDelay: "0.15s", maxWidth: "24ch" }}
         >
-          Industrial fuel,
+          Engineering sustainable
           <br />
-          <span className="accent-mark italic">engineered.</span>
+          <span className="accent-mark italic">energy solutions.</span>
         </h1>
+        <p
+          className="serif reveal"
+          style={{
+            transitionDelay: "0.22s",
+            fontSize: "clamp(20px, 2.4vw, 30px)",
+            fontWeight: 300,
+            color: "var(--ink-soft)",
+            marginTop: 24,
+            maxWidth: "30ch",
+            lineHeight: 1.3,
+          }}
+        >
+          Waste becomes <span className="italic" style={{ color: "var(--accent)" }}>fuel.</span> Fuel
+          becomes <span className="italic" style={{ color: "var(--accent)" }}>carbon credit.</span>{" "}
+          Carbon credit becomes{" "}
+          <span className="italic" style={{ color: "var(--accent)" }}>margin.</span>
+        </p>
         <div className="hero-meta-row reveal" style={{ transitionDelay: "0.3s" }}>
           <p className="lead">
             From the heavy-duty workhorse to the precision-grade pellet, our range is built around

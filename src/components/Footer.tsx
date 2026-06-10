@@ -49,7 +49,7 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Biofuelix Solutions Pvt. Ltd.</span>
-          <span>Bridging the gap to a greener tomorrow.</span>
+          <span>The bridge between fields and fuel.</span>
         </div>
       </div>
       <div className="footer-mega">BIOFUELIX</div>

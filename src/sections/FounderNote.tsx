@@ -29,10 +29,8 @@ function FounderPortrait() {
         <rect width="400" height="500" fill="url(#lightGrad)" />
 
         <g opacity="0.85">
-          <circle cx="155" cy="200" r="48" fill="#1a3a24" />
-          <path d="M 95 500 Q 95 320 155 290 Q 215 320 215 500 Z" fill="#1a3a24" />
-          <circle cx="265" cy="220" r="46" fill="#143020" />
-          <path d="M 200 500 Q 200 340 265 312 Q 325 340 325 500 Z" fill="#143020" />
+          <circle cx="200" cy="206" r="56" fill="#1a3a24" />
+          <path d="M 116 500 Q 116 326 200 294 Q 284 326 284 500 Z" fill="#1a3a24" />
         </g>
 
         <g opacity="0.15" fill="#d4b962">
@@ -50,7 +48,7 @@ function FounderPortrait() {
             fontSize="10"
             letterSpacing="2"
           >
-            FOUNDERS · NEW DELHI
+            FOUNDER · AHMEDABAD
           </text>
         </g>
       </svg>
@@ -93,7 +91,7 @@ export function FounderNote() {
           </div>
           <div className="reveal" style={{ transitionDelay: "0.15s" }}>
             <div className="eyebrow" style={{ marginBottom: 24 }}>
-              A note from the founders
+              A note from the founder
             </div>
             <p className="display-l serif" style={{ fontWeight: 300, marginBottom: 32 }}>
               "We don't just facilitate transactions — we take on{" "}
@@ -103,9 +101,9 @@ export function FounderNote() {
               of the supply chain so you can focus on your core operations."
             </p>
             <p style={{ color: "var(--ink-soft)", maxWidth: "52ch", marginBottom: 24 }}>
-              When we first looked into the biomass industry, we didn't just see agricultural waste;
-              we saw an untapped solution to one of our generation's greatest challenges. But we also
-              saw the friction. Industrial leaders wanted to go green — they were held back by
+              When I first looked into the biomass industry, I didn't just see agricultural waste; I
+              saw an untapped solution to one of our generation's greatest challenges. But I also saw
+              the friction. Industrial leaders wanted to go green — they were held back by
               inconsistent supply and varying quality. The world didn't need more fuel. It needed a
               better bridge.
             </p>
@@ -118,7 +116,7 @@ export function FounderNote() {
                   lineHeight: 1,
                 }}
               >
-                Anjali & Sandeep Nair
+                Anjali Nair
               </div>
             </div>
             <div
@@ -131,7 +129,7 @@ export function FounderNote() {
                 marginTop: 8,
               }}
             >
-              Co-Founders · Biofuelix Solutions
+              Founder · Biofuelix Solutions
             </div>
             <Link to="/about" className="tlink" style={{ marginTop: 32 }}>
               Read the full message <ArrowUpRight />
