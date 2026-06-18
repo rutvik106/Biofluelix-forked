@@ -464,7 +464,7 @@ function BlogTeaser() {
                   );
                 })}
               </g>
-              <text x="60" y="60" fill="#d4b962" fontFamily="monospace" fontSize="11" letterSpacing="2">
+              <text x="60" y="60" fill="#d4b962" fontFamily="Inter, sans-serif" fontSize="11" letterSpacing="2">
                 HIDDEN COST · 2026
               </text>
               <line x1="60" y1="80" x2="120" y2="80" stroke="#d4b962" strokeWidth="1" />

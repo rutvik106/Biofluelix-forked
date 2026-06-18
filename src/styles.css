@@ -25,10 +25,10 @@
   --accent-bright: var(--gold-bright);
 
   /* Type — overridable via Tweaks */
-  --font-display: "Fraunces", "Playfair Display", Georgia, serif;
-  --font-body: "Instrument Sans", "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-script: "Caveat", cursive;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
+  --font-script: "Inter", system-ui, sans-serif;
 
   /* Spacing scale */
   --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px;
@@ -41,11 +41,22 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: var(--forest); }
 
 body {
   font-family: var(--font-body);
-  background: var(--paper);
+  /* Full-page backdrop: light at top -> dark in the middle -> green at the bottom.
+     Maps to the whole document height, so each page reads as a journey from
+     light to green as you scroll. */
+  background: linear-gradient(
+    180deg,
+    var(--paper) 0%,
+    var(--cream) 16%,
+    var(--forest-deep) 60%,
+    var(--forest) 100%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
   color: var(--ink);
   font-size: 17px;
   line-height: 1.55;
@@ -87,29 +98,29 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .display-xxl {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(56px, 10vw, 168px);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
+  font-size: clamp(40px, 6.2vw, 100px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
   font-feature-settings: "ss01";
 }
 .display-xl {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(44px, 7vw, 104px);
-  line-height: 0.95;
+  font-size: clamp(36px, 5.4vw, 80px);
+  line-height: 0.98;
   letter-spacing: -0.03em;
 }
 .display-l {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(36px, 5vw, 72px);
-  line-height: 1.0;
+  font-size: clamp(30px, 4.2vw, 58px);
+  line-height: 1.05;
   letter-spacing: -0.025em;
 }
 .display-m {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(28px, 3.5vw, 48px);
+  font-size: clamp(26px, 3.2vw, 42px);
   line-height: 1.1;
   letter-spacing: -0.02em;
 }
@@ -134,21 +145,26 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .section {
-  padding: clamp(72px, 10vw, 160px) 0;
+  padding: clamp(56px, 7vw, 112px) 0;
   position: relative;
+  /* translucent light tint by default so the page gradient flows through
+     while dark text stays legible; modifier classes below override this */
+  background: rgba(250, 247, 240, 0.58);
 }
-.section.tight { padding: clamp(48px, 6vw, 96px) 0; }
+.section.tight { padding: clamp(40px, 5vw, 80px) 0; }
 
+/* Section tints are translucent so the full-page gradient flows through,
+   while each section keeps enough of its own tone to stay readable. */
 .section-dark {
-  background: var(--forest-deep);
+  background: rgba(15, 40, 24, 0.62);
   color: var(--cream);
 }
 .section-dark .lead { color: rgba(245, 240, 230, 0.7); }
 .section-dark .eyebrow { color: rgba(245, 240, 230, 0.6); }
 .section-dark .eyebrow::before { background: var(--accent-bright); }
 
-.section-cream { background: var(--cream); }
-.section-bone { background: var(--bone); }
+.section-cream { background: rgba(245, 240, 230, 0.6); }
+.section-bone { background: rgba(237, 229, 211, 0.6); }
 
 .divider-line {
   height: 1px;
@@ -305,18 +321,105 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--accent);
   border-radius: 2px;
 }
-.nav-cta { display: flex; align-items: center; gap: 12px; }
+
+/* Mobile menu toggle: two bars that morph into an X when open. Hidden on desktop. */
+.nav-toggle {
+  display: none;
+  position: relative;
+  z-index: 120;
+  width: 30px;
+  height: 18px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ink);
+}
+.nav-toggle span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+}
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { bottom: 0; }
+.nav.menu-open .nav-toggle span:nth-child(1) { top: 8px; transform: rotate(45deg); }
+.nav.menu-open .nav-toggle span:nth-child(2) { bottom: 8px; transform: rotate(-45deg); }
+
+/* Sibling overlay panel for the mobile menu — hidden on desktop. */
+.nav-mobile { display: none; }
 
 @media (max-width: 880px) {
-  .nav-links { display: none; }
   .nav-brand small { display: none; }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+
+  /* When the menu is open, let the overlay show through the bar; the logo and
+     toggle (inside <nav>, which sits above the overlay) stay visible + tappable. */
+  .nav.menu-open {
+    background: transparent;
+    backdrop-filter: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 99; /* under the nav bar (100) so the logo + close button stay on top */
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--gutter);
+    background: rgba(250, 247, 240, 0.98);
+    backdrop-filter: blur(22px) saturate(140%);
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease, visibility 0.4s;
+  }
+  .nav-mobile.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-mobile ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .nav-mobile a {
+    position: relative;
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: clamp(30px, 9vw, 44px);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    padding: 10px 0;
+    transition: color 0.2s;
+  }
+  .nav-mobile a:hover,
+  .nav-mobile a.active { color: var(--forest); }
+  .nav-mobile a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 32px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
 }
 
 /* ===========================
    Footer
    =========================== */
 .footer {
-  background: var(--forest-deep);
+  background: rgba(15, 40, 24, 0.55);
   color: var(--cream);
   padding: clamp(64px, 8vw, 120px) 0 32px;
 }
@@ -637,7 +740,7 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
   padding: 24px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  background: var(--paper);
+  background: rgba(250, 247, 240, 0.6);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
@@ -682,10 +785,12 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
 }
 .pillar-card {
   background: var(--paper);
-  padding: clamp(32px, 4vw, 56px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  padding: clamp(28px, 3.4vw, 48px);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: clamp(16px, 1.6vw, 28px);
+  row-gap: 14px;
+  align-items: baseline;
   position: relative;
   transition: background 0.4s;
 }
@@ -694,12 +799,17 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
 .section-dark .pillar-card { background: var(--forest-deep); }
 .section-dark .pillar-card:hover { background: #122d1c; }
 .pillar-num {
+  grid-column: 1;
+  grid-row: 1;
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.2em;
   color: var(--accent);
 }
 .pillar-title {
+  grid-column: 2;
+  grid-row: 1;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(26px, 2.6vw, 36px);
@@ -707,23 +817,18 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
   letter-spacing: -0.02em;
 }
 .pillar-body {
+  grid-column: 2;
+  grid-row: 2;
   color: var(--ink-soft);
   font-size: 16px;
   line-height: 1.6;
   max-width: 42ch;
 }
 .section-dark .pillar-body { color: rgba(245,240,230,0.65); }
-.pillar-icon {
-  width: 56px; height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 8px;
-  color: var(--forest);
-}
-.section-dark .pillar-icon { color: var(--accent-bright); }
 @media (max-width: 760px) {
-  .pillar-grid { grid-template-columns: 1fr; }
+  .pillar-grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .pillar-card { padding: 28px 24px; gap: 12px; }
+  .pillar-body { max-width: none; }
 }
 
 /* ===========================
@@ -733,20 +838,22 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: clamp(32px, 6vw, 96px);
-  align-items: end;
+  align-items: start;
   margin-bottom: 16px;
 }
 .section-header .left .eyebrow { margin-bottom: 16px; }
 .section-header .left h2 {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(36px, 5vw, 72px);
-  line-height: 1.0;
+  font-size: clamp(30px, 3.8vw, 54px);
+  line-height: 1.05;
   letter-spacing: -0.025em;
 }
-.section-header .right { padding-bottom: 16px; }
+/* align the lead paragraph with the heading's first line, not the eyebrow */
+.section-header .right { padding-top: 27px; }
 @media (max-width: 760px) {
-  .section-header { grid-template-columns: 1fr; }
+  .section-header { grid-template-columns: 1fr; gap: 20px; }
+  .section-header .right { padding-top: 0; }
 }
 
 /* ===========================
@@ -806,8 +913,8 @@ body.anim-bold .reveal-stagger.in > * { transform: none; }
 .product-card .product-title {
   font-family: var(--font-display);
   font-weight: 300;
-  font-size: clamp(36px, 4.5vw, 64px);
-  line-height: 0.95;
+  font-size: clamp(28px, 3.6vw, 50px);
+  line-height: 0.98;
   letter-spacing: -0.025em;
   color: var(--cream);
   margin-bottom: 12px;

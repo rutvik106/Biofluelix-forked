@@ -35,9 +35,6 @@ export function Hero() {
             <Link to="/products" className="btn btn-primary">
               Explore products <ArrowRight />
             </Link>
-            <Link to="/contact" className="btn btn-ghost">
-              Get a quote
-            </Link>
           </div>
         </div>
 

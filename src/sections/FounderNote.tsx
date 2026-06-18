@@ -44,7 +44,7 @@ function FounderPortrait() {
             x="32"
             y="476"
             fill="#d4b962"
-            fontFamily="monospace"
+            fontFamily="Inter, sans-serif"
             fontSize="10"
             letterSpacing="2"
           >
@@ -75,7 +75,7 @@ function FounderPortrait() {
 
 export function FounderNote() {
   return (
-    <section className="section section-cream">
+    <section className="section section-dark">
       <div className="shell">
         <div
           className="founder-grid"
@@ -100,7 +100,7 @@ export function FounderNote() {
               </span>{" "}
               of the supply chain so you can focus on your core operations."
             </p>
-            <p style={{ color: "var(--ink-soft)", maxWidth: "52ch", marginBottom: 24 }}>
+            <p style={{ color: "rgba(245, 240, 230, 0.68)", maxWidth: "52ch", marginBottom: 24 }}>
               When I first looked into the biomass industry, I didn't just see agricultural waste; I
               saw an untapped solution to one of our generation's greatest challenges. But I also saw
               the friction. Industrial leaders wanted to go green — they were held back by
@@ -112,7 +112,7 @@ export function FounderNote() {
                 style={{
                   fontFamily: "var(--font-script)",
                   fontSize: 32,
-                  color: "var(--forest)",
+                  color: "var(--accent-bright)",
                   lineHeight: 1,
                 }}
               >
@@ -125,7 +125,7 @@ export function FounderNote() {
                 fontSize: 11,
                 letterSpacing: "0.18em",
                 textTransform: "uppercase",
-                color: "var(--ink-faint)",
+                color: "rgba(245, 240, 230, 0.5)",
                 marginTop: 8,
               }}
             >

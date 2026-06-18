@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ArrowRight, ArrowUpRight } from "../components/icons";
+import { ArrowRight, ArrowUpRight, WhatsApp } from "../components/icons";
 
 function ContactHero() {
   return (
@@ -112,7 +112,13 @@ function ContactBody() {
           </ContactBlock>
 
           <ContactBlock label="WhatsApp Business">
-            <a href="#">
+            <a
+              href="https://wa.me/919000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
+            >
+              <WhatsApp size={18} color="#25D366" />
               Open chat <ArrowUpRight size={12} />
             </a>
             <div style={{ fontSize: 13, color: "rgba(245,240,230,0.55)", marginTop: 4 }}>

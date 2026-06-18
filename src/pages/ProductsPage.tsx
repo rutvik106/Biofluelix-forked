@@ -147,7 +147,7 @@ function ProductVisual({ variant }: { variant: "briquettes" | "pellets" }) {
 
         <g>
           <rect x="20" y="460" width="200" height="24" fill="rgba(15,40,24,0.7)" rx="12" />
-          <text x="32" y="476" fill="#d4b962" fontFamily="monospace" fontSize="10" letterSpacing="2">
+          <text x="32" y="476" fill="#d4b962" fontFamily="Inter, sans-serif" fontSize="10" letterSpacing="2">
             {isBriquette ? "BIO-COAL · 60-100mm" : "PRECISION · 6-12mm"}
           </text>
         </g>

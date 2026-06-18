@@ -3,7 +3,7 @@ import { ArrowRight } from "../components/icons";
 
 export function HomeCTA() {
   return (
-    <section className="section">
+    <section className="section section-dark">
       <div className="shell" style={{ textAlign: "center" }}>
         <div
           className="eyebrow no-bar reveal"

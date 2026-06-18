@@ -5,7 +5,6 @@ import { ProductsPreview } from "../sections/ProductsPreview";
 import { WhyNow } from "../sections/WhyNow";
 import { Co2Calculator } from "../sections/Co2Calculator";
 import { FounderNote } from "../sections/FounderNote";
-import { HomeCTA } from "../sections/HomeCTA";
 
 export default function HomePage() {
   return (
@@ -17,7 +16,6 @@ export default function HomePage() {
       <ProductsPreview />
       <Co2Calculator />
       <FounderNote />
-      <HomeCTA />
     </>
   );
 }
