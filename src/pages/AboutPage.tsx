@@ -88,8 +88,8 @@ function Mission({ showImage = false }: { showImage?: boolean }) {
             }}
           >
             <img
-              src="/assets/sustainable-sourcing.jpg"
-              alt="A seedling cupped in hands with live water, sunlight, temperature and soil-nutrient readouts — data-driven, sustainable sourcing"
+              src="/assets/mission-biomass-supply.webp"
+              alt="A technician quality-checks biomass briquettes beside stocked inventory and a truck prepared for industrial delivery"
               loading="lazy"
               style={{
                 position: "absolute",
@@ -123,7 +123,7 @@ function Mission({ showImage = false }: { showImage?: boolean }) {
               }}
             >
               <span style={{ width: 24, height: 1, background: "var(--accent-bright)" }} />
-              Sustainable sourcing · Measured at the root
+              Quality checked · Ready at industrial scale
             </div>
           </div>
         ) : (
