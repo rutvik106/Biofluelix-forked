@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "../components/icons";
+import { ArrowRight, ArrowUpRight } from "../components/icons";
 import { HomeCTA } from "../sections/HomeCTA";
 import { Co2Calculator } from "../sections/Co2Calculator";
 
@@ -372,7 +372,9 @@ function BlogTeaser() {
         </div>
 
         <a
-          href="#"
+          href="https://samarth.powermin.gov.in/home/regulatory_policies"
+          target="_blank"
+          rel="noreferrer"
           className="reveal blog-grid"
           style={{
             display: "grid",
@@ -396,20 +398,19 @@ function BlogTeaser() {
                 marginBottom: 24,
               }}
             >
-              FEATURE · 7 MIN READ
+              OFFICIAL RESOURCE · SAMARTH MISSION
             </div>
             <h3 className="display-l serif" style={{ fontWeight: 300, marginBottom: 24 }}>
-              Beyond the bill: why your <span className="italic">'cheap' coal</span> is costing you a
-              fortune.
+              Understand India's biomass{" "}
+              <span className="italic">co-firing policies.</span>
             </h3>
             <p style={{ color: "var(--ink-soft)", marginBottom: 32, fontSize: 17 }}>
-              For decades, procurement managers had one goal: find the cheapest coal per ton. But
-              today, the invoice price is only half the story. Three invisible ways your business
-              leaks money on fossil fuel right now.
+              Explore the Ministry of Power's official policies, standards, and operating guidance
+              for using biomass pellets in coal-based thermal power plants.
             </p>
-            {/* <span className="tlink">
-              Read the full piece <ArrowUpRight />
-            </span> */}
+            <span className="tlink">
+              Browse policy resources <ArrowUpRight />
+            </span>
           </div>
           <div
             style={{
@@ -427,6 +428,34 @@ function BlogTeaser() {
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
           </div>
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCPlInu7bxrp2XQdG_HTg3HA"
+          target="_blank"
+          rel="noreferrer"
+          className="reveal"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 24,
+            marginTop: 16,
+            padding: "22px clamp(24px, 4vw, 40px)",
+            border: "1px solid var(--line)",
+            borderRadius: 8,
+            color: "var(--ink)",
+          }}
+        >
+          <span>
+            <span
+              className="mono"
+              style={{ color: "var(--accent)", fontSize: 11, letterSpacing: "0.16em" }}
+            >
+              WATCH
+            </span>
+            <span style={{ marginLeft: 16 }}>SAMARTH Mission videos on biomass co-firing</span>
+          </span>
+          <ArrowUpRight size={18} />
         </a>
         <style>{`@media (max-width: 760px) {
           .blog-grid { grid-template-columns: 1fr !important; }
