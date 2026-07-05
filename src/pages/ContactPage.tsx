@@ -135,12 +135,18 @@ function ContactBody() {
               9:00 AM – 6:30 PM IST
             </ContactBlock>
 
-            <ContactBlock label="Registered address" last>
+            <ContactBlock label="Operating office">
               Biofuelix Solutions
               <br />
               218 Prodesk, Aamrakunj Business Centre, near KB Royal Phoenix, Tragad,
               <br />
               Chandkheda, Ahmedabad, Gujarat 382424
+            </ContactBlock>
+
+            <ContactBlock label="Registered office" last>
+              Biofuelix Solutions
+              <br />
+              Ghatlodia, Ahmedabad, Gujarat, India
             </ContactBlock>
           </div>
 

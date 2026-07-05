@@ -430,7 +430,7 @@ function BlogTeaser() {
           </div>
         </a>
         <a
-          href="https://www.youtube.com/channel/UCPlInu7bxrp2XQdG_HTg3HA"
+          href="https://youtu.be/qtuiYoVgvzc?feature=shared"
           target="_blank"
           rel="noreferrer"
           className="reveal"
@@ -453,7 +453,7 @@ function BlogTeaser() {
             >
               WATCH
             </span>
-            <span style={{ marginLeft: 16 }}>SAMARTH Mission videos on biomass co-firing</span>
+            <span style={{ marginLeft: 16 }}>Watch: SAMARTH Mission on biomass co-firing</span>
           </span>
           <ArrowUpRight size={18} />
         </a>
