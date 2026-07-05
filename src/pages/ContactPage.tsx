@@ -79,68 +79,96 @@ function ContactBody() {
     <section className="section">
       <div className="shell">
         <div
-          className="reveal"
+          className="reveal contact-location-grid"
           style={{
-            maxWidth: 560,
+            maxWidth: 1120,
             margin: "0 auto",
-            padding: "clamp(32px, 4vw, 56px)",
+            display: "grid",
+            gridTemplateColumns: "minmax(0, 0.9fr) minmax(360px, 1.1fr)",
             background: "var(--forest-deep)",
             color: "var(--cream)",
             borderRadius: 8,
+            overflow: "hidden",
           }}
         >
-          <div
-            className="mono"
-            style={{
-              fontSize: 11,
-              letterSpacing: "0.2em",
-              color: "var(--accent-bright)",
-              marginBottom: 24,
-            }}
-          >
-            DIRECT CHANNELS
+          <div style={{ padding: "clamp(32px, 4vw, 56px)" }}>
+            <div
+              className="mono"
+              style={{
+                fontSize: 11,
+                letterSpacing: "0.2em",
+                color: "var(--accent-bright)",
+                marginBottom: 24,
+              }}
+            >
+              DIRECT CHANNELS
+            </div>
+
+            <ContactBlock label="Email">
+              <a href="mailto:biofuelixsolutions@gmail.com">biofuelixsolutions@gmail.com</a>
+              <br />
+              <a href="mailto:connect@biofuelix.com">connect@biofuelix.com</a>
+            </ContactBlock>
+
+            <ContactBlock label="Phone">
+              <a href="tel:+919898281520">+91 9898281520</a>
+            </ContactBlock>
+
+            <ContactBlock label="WhatsApp Business">
+              <a
+                href="https://wa.me/919898281520"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
+              >
+                <WhatsApp size={18} color="#25D366" />
+                Open chat <ArrowUpRight size={12} />
+              </a>
+              <div style={{ fontSize: 13, color: "rgba(245,240,230,0.55)", marginTop: 4 }}>
+                For quick quote requests
+              </div>
+            </ContactBlock>
+
+            <ContactBlock label="Office hours">
+              Mon – Sat
+              <br />
+              9:00 AM – 6:30 PM IST
+            </ContactBlock>
+
+            <ContactBlock label="Registered address" last>
+              Biofuelix Solutions
+              <br />
+              218 Prodesk, Aamrakunj Business Centre, near KB Royal Phoenix, Tragad,
+              <br />
+              Chandkheda, Ahmedabad, Gujarat 382424
+            </ContactBlock>
           </div>
 
-          <ContactBlock label="Email">
-            <a href="mailto:biofuelixsolutions@gmail.com">biofuelixsolutions@gmail.com</a>
-            <br />
-            <a href="mailto:connect@biofuelix.com">connect@biofuelix.com</a>
-          </ContactBlock>
-
-          <ContactBlock label="Phone">
-            <a href="tel:+919898281520">+91 9898281520</a>
-          </ContactBlock>
-
-          <ContactBlock label="WhatsApp Business">
+          <div style={{ minHeight: 540, position: "relative", background: "var(--bone)" }}>
+            <iframe
+              title="Biofuelix Solutions office at Aamrakunj Business Centre"
+              src="https://www.google.com/maps?q=Aamrakunj%20Business%20Centre%2C%20Chandkheda%2C%20Ahmedabad%2C%20Gujarat%20382424&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ width: "100%", height: "100%", minHeight: 540, border: 0 }}
+              allowFullScreen
+            />
             <a
-              href="https://wa.me/919898281520"
+              href="https://share.google/StdQon8YDe9EIWFhG"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: 8 }}
+              className="btn btn-primary"
+              style={{ position: "absolute", left: 24, bottom: 24 }}
             >
-              <WhatsApp size={18} color="#25D366" />
-              Open chat <ArrowUpRight size={12} />
+              Get directions <ArrowUpRight size={14} />
             </a>
-            <div style={{ fontSize: 13, color: "rgba(245,240,230,0.55)", marginTop: 4 }}>
-              For quick quote requests
-            </div>
-          </ContactBlock>
-
-          <ContactBlock label="Office hours">
-            Mon – Sat
-            <br />
-            9:00 AM – 6:30 PM IST
-          </ContactBlock>
-
-          <ContactBlock label="Reg. Address" last>
-            Biofuelix Solutions.
-            <br />
-            218 Prodesk, Amrakunj Business Centre Nr KB Royal Phoenix, Tragad,
-            <br />
-            Chandkheda, Ahmedabad, Gujarat-382424
-          </ContactBlock>
-          
+          </div>
         </div>
+        <style>{`@media (max-width: 820px) {
+          .contact-location-grid { grid-template-columns: 1fr !important; }
+          .contact-location-grid > div:last-child,
+          .contact-location-grid iframe { min-height: 380px !important; }
+        }`}</style>
       </div>
     </section>
   );

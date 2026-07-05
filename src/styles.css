@@ -417,7 +417,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
    Footer
    =========================== */
 .footer {
-  background: rgba(15, 40, 24, 0.55);
+  background: var(--forest-deep);
   color: var(--cream);
   padding: clamp(64px, 8vw, 120px) 0 32px;
 }
