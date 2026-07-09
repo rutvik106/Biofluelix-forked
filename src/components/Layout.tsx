@@ -4,6 +4,7 @@ import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { FloatingWhatsApp } from "./FloatingWhatsApp";
 import { GradientPicker } from "./GradientPicker";
+import { Seo } from "./Seo";
 import { useReveal } from "../hooks/useReveal";
 
 export function Layout() {
@@ -23,6 +24,7 @@ export function Layout() {
 
   return (
     <>
+      <Seo />
       <Nav />
       <Outlet />
       <Footer />
